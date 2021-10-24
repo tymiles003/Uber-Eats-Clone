@@ -3,10 +3,12 @@ import { View, Text, Image, TouchableOpacity } from "react-native";
 import MaterialCommmunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 export default function RestaurantItem() {
   return (
-    <View style={{ marginTop: 10, padding: 15, backgroundColor: "white" }}>
-      <RestaurantImage />
-      <RestaurantInfo />
-    </View>
+    <TouchableOpacity activeOpacity={1} style={{ marginBottom: 30 }}>
+      <View style={{ marginTop: 10, padding: 15, backgroundColor: "white" }}>
+        <RestaurantImage />
+        <RestaurantInfo />
+      </View>
+    </TouchableOpacity>
   );
 }
 
