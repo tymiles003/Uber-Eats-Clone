@@ -21,12 +21,15 @@ export default function BottomTabs() {
 }
 
 const Icon = (props) => (
-  <FontAwesome5
-    name={props.icon}
-    size={25}
-    style={{
-      marginBottom: 3,
-      alignSelf: "center",
-    }}
-  />
+  <View>
+    <FontAwesome5
+      name={props.icon}
+      size={25}
+      style={{
+        marginBottom: 3,
+        alignSelf: "center",
+      }}
+    />
+    <Text>{props.text}</Text>
+  </View>
 );
