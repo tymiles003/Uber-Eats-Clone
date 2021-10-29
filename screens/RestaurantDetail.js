@@ -6,7 +6,8 @@ import About from "../components/restaurantDetail/About";
 export default function restaurantDetail() {
   return (
     <View>
-      <Text>RESTAURANT</Text>
+      <About />
+      <Divider width={1.8} style={{ marginVertical: 20 }} />
     </View>
   );
 }
