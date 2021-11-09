@@ -39,10 +39,16 @@ const styles = StyleSheet.create({
 
 export default function MenuItems() {
   return (
-    <View style={styles.menuItemStyle}>
-      <FoodInfo food={foods[0]} />
-      <FoodImage food={foods[0]} />
-    </View>
+    <>
+      {foods.map((food, index) => (
+        <View key={index}>
+          <View style={styles.menuItemStyle}>
+            <FoodInfo food={food} />
+            <FoodImage food={food} />
+          </View>
+        </View>
+      ))}
+    </>
   );
 }
 
