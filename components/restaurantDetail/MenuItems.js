@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, Image } from "react-native";
 
 const foods = [
   {
@@ -41,7 +41,7 @@ export default function MenuItems() {
   return (
     <View style={styles.menuItemStyle}>
       <FoodInfo food={foods[0]} />
-      {/* FoodImage */}
+      <FoodImage food={foods[0]} />
     </View>
   );
 }
@@ -51,5 +51,14 @@ const FoodInfo = (props) => (
     <Text style={styles.titleStyle}>{props.food.title}</Text>
     <Text>{props.food.description}</Text>
     <Text>{props.food.price}</Text>
+  </View>
+);
+
+const FoodImage = (props) => (
+  <View>
+    <Image
+      source={{ uri: props.food.image }}
+      style={{ width: 100, height: 100, borderRadius: 8 }}
+    />
   </View>
 );
