@@ -1,28 +1,18 @@
 import React from "react";
 import { View, Text, Image } from "react-native";
 
-const yelpRestInfo = {
-  name: "Farmhouse Kitchen Thai Cuisine",
-  image:
-    "https://img.cdn4dd.com/cdn-cgi/image/fit=cover,width=600,height=400,format=jpeg,quality=50/https://doordash-static.s3.amazonaws.com/media/store/header/109873.jpg",
-  price: "$$",
-  reviews: "1500",
-  rating: 5,
-  categories: [{ title: "Thai" }, { title: "comfort food" }],
-};
+export default function About(props) {
+  const { name, image, price, reviews, rating, categories } =
+    props.route.params;
 
-const { name, image, price, reviews, rating, categories } = yelpRestInfo;
+  const formattedCategories = categories.map((cat) => cat.title).join(" • ");
 
-const formattedCategories = categories.map((cat) => cat.title).join(" • ");
-
-const description = `${formattedCategories} ${
-  price ? " • " + price : ""
-} •  🎫 • ${rating} ⭐ (${reviews}+)`;
-
-export default function About() {
+  const description = `${formattedCategories} ${
+    price ? " • " + price : ""
+  } •  🎫 • ${rating} ⭐ (${reviews}+)`;
   return (
     <View>
-      <RestaurantImage image={{ image }} />
+      <RestaurantImage image={image} />
       <RestaurantName name={name} />
       <RestaurantDescription description={description} />
     </View>
