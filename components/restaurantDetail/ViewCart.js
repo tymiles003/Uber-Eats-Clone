@@ -11,7 +11,7 @@ export default function ViewCart() {
         flexDirection: "row",
         justifyContent: "center",
         position: "absolute",
-        bottom: 0,
+        bottom: 190,
         zIndex: 999,
       }}
     >
@@ -33,7 +33,7 @@ export default function ViewCart() {
             position: "relative",
           }}
         >
-          <Text style={{ color: "white", fontSize: 20 }}>ViewCarts</Text>
+          <Text style={{ color: "white", fontSize: 20 }}>View Cart</Text>
         </TouchableOpacity>
       </View>
     </View>
