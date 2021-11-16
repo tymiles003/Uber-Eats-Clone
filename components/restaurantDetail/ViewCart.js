@@ -1,7 +1,16 @@
 import React from "react";
 import { View, Text, TouchableOpacity } from "react-native";
+import { useSelector } from "react-redux";
 
 export default function ViewCart() {
+  // grabbing items from state
+  const items = useSelector((state) => state.cartReducer.selectedItems.items);
+
+  const total = items
+    // map through the items
+    .map((item) => Number(item.price.replace("$", "")))
+    .reduce((prev, curr) => prev + curr, 0);
+
   return (
     <View
       style={{
