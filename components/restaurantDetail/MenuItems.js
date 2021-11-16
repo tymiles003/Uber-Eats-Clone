@@ -40,12 +40,12 @@ const styles = StyleSheet.create({
   },
 });
 
-export default function MenuItems() {
+export default function MenuItems({ restaurantName }) {
   const dispatch = useDispatch();
   const selectItem = (item) =>
     dispatch({
       type: "ADD_TO_CART",
-      payload: item,
+      payload: { ...item, restaurantName: restaurantName },
     });
 
   return (
