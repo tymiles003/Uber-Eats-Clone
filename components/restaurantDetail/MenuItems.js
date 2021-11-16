@@ -25,22 +25,6 @@ const foods = [
     image:
       "https://mydominicankitchen.com/wp-content/uploads/2019/07/Mofongo-Smart-Little-Cookie-3.jpg",
   },
-  {
-    title: "tripleta",
-    description:
-      "Tripleta is a popular sandwich from Puerto Rico, its name derived from the fact that it is filled with three types of meat: grilled steak, lechon pork",
-    price: "$22.00",
-    image:
-      "https://cdn.vox-cdn.com/thumbor/3vfadPUpAuVp-JdsPNaC7dqm640=/0x0:6720x4480/1200x675/filters:focal(2823x1703:3897x2777)/cdn.vox-cdn.com/uploads/chorus_image/image/68479469/3O7A0380.0.jpg",
-  },
-
-  {
-    title: "masala chicken",
-    description: "mashed platain with fried chicken",
-    price: "$22.00",
-    image:
-      "https://www.indianhealthyrecipes.com/wp-content/uploads/2017/05/chicken-masala-recipe-1-480x270.jpg",
-  },
 ];
 
 const styles = StyleSheet.create({

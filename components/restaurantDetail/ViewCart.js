@@ -1,6 +1,5 @@
 import React from "react";
-import { View, Text } from "react-native";
-import { TouchableOpacity } from "react-native-gesture-handler";
+import { View, Text, TouchableOpacity } from "react-native";
 
 export default function ViewCart() {
   return (
@@ -8,10 +7,10 @@ export default function ViewCart() {
       style={{
         flex: 1,
         alignItems: "center",
-        flexDirection: "row",
         justifyContent: "center",
+        flexDirection: "row",
         position: "absolute",
-        bottom: 190,
+        bottom: 130,
         zIndex: 999,
       }}
     >
