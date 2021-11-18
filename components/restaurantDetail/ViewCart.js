@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { View, Text, TouchableOpacity, Modal, StyleSheet } from "react-native";
 import _ from "react-native-google-places";
 import { useSelector } from "react-redux";
+import OrderItem from "./OrderItem";
 
 export default function ViewCart() {
   const [modalVisible, setModalVisible] = useState(false);
@@ -63,6 +64,9 @@ export default function ViewCart() {
         <View style={styles.modalContainer}>
           <View style={styles.modalCheckoutContainer}>
             <Text style={styles.restaurantName}>{restaurantName}</Text>
+            {items.map((item, index) => (
+              <OrderItem key={index} item={item} />
+            ))}
           </View>
         </View>
       </>
