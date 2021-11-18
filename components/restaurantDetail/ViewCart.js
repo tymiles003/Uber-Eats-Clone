@@ -6,11 +6,22 @@ export default function ViewCart() {
   // grabbing items from state
   const items = useSelector((state) => state.cartReducer.selectedItems.items);
 
+  // '$13.50'
+  // '13.50
+  // Number('13.50') 13.5
+  // [13.5, 20.5,19.5]
+  // reduce [13.5,20.5,19.5]
+  // reduce 13.5 +20.5+19.5 = 43.5
   const total = items
     // map through the items
     .map((item) => Number(item.price.replace("$", "")))
     .reduce((prev, curr) => prev + curr, 0);
 
+  const totalUSD = total.toLocaleString("en", {
+    style: "currency",
+    currency: "USD",
+  });
+  console.log(totalUSD);
   return (
     <View
       style={{
