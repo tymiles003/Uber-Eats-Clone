@@ -82,6 +82,7 @@ export default function ViewCart() {
                   width: 300,
                   position: "relative",
                 }}
+                onPress={() => setModalVisible(false)}
               >
                 <Text style={{ color: "white", fontSize: 20 }}>Checkout</Text>
               </TouchableOpacity>
