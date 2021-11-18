@@ -85,6 +85,17 @@ export default function ViewCart() {
                 onPress={() => setModalVisible(false)}
               >
                 <Text style={{ color: "white", fontSize: 20 }}>Checkout</Text>
+                <Text
+                  style={{
+                    position: "absolute",
+                    right: 20,
+                    color: "white",
+                    fontSize: 15,
+                    top: 17,
+                  }}
+                >
+                  {total ? totalUSD : ""}
+                </Text>
               </TouchableOpacity>
             </View>
           </View>
@@ -111,7 +122,7 @@ export default function ViewCart() {
             justifyContent: "center",
             flexDirection: "row",
             position: "absolute",
-            bottom: 10,
+            bottom: 130,
             zIndex: 999,
           }}
         >
