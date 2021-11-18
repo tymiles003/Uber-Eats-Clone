@@ -67,6 +67,9 @@ export default function ViewCart() {
             {items.map((item, index) => (
               <OrderItem key={index} item={item} />
             ))}
+            <View style={styles.subtotalContainer}>
+              <Text>Subtotal</Text>
+            </View>
           </View>
         </View>
       </>
