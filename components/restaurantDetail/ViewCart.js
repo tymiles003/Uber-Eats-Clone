@@ -1,8 +1,10 @@
-import React from "react";
-import { View, Text, TouchableOpacity } from "react-native";
+import React, { useState } from "react";
+import { View, Text, TouchableOpacity, Modal } from "react-native";
 import { useSelector } from "react-redux";
 
 export default function ViewCart() {
+  const [modalVisible, setModalVisible] = useState(false);
+
   // grabbing items from state
   const items = useSelector((state) => state.cartReducer.selectedItems.items);
 
@@ -21,9 +23,44 @@ export default function ViewCart() {
     style: "currency",
     currency: "USD",
   });
-  console.log(totalUSD);
+
+  const checkoutModalContent = () => {
+    return (
+      <View
+        style={{
+          flex: 1,
+          justifyContent: "center",
+          alignItems: "center",
+          marginTop: 30,
+        }}
+      >
+        <View
+          style={{
+            backgroundColor: "black",
+            padding: 10,
+            borderRadius: 30,
+            width: 150,
+            alignItems: "center",
+          }}
+        >
+          <TouchableOpacity onPress={() => setModalVisible(false)}>
+            <Text style={{ color: "white" }}>Checkout</Text>
+          </TouchableOpacity>
+        </View>
+      </View>
+    );
+  };
+
   return (
     <>
+      <Modal
+        animationType="slide"
+        visible={modalVisible}
+        transparent={true}
+        onRequestClose={() => setModalVisible(false)}
+      >
+        {checkoutModalContent()}
+      </Modal>
       {total ? (
         <View
           style={{
@@ -54,6 +91,7 @@ export default function ViewCart() {
                 width: 300,
                 position: "relative",
               }}
+              onPress={() => setModalVisible(true)}
             >
               <Text style={{ color: "white", fontSize: 20, marginRight: 30 }}>
                 View Cart
