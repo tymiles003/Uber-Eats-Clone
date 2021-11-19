@@ -6,6 +6,7 @@
     "dotenv": "^10.0.0",
     "expo": "~42.0.0",
     "expo-image-picker": "^11.0.3",
+    "firebase": "8.2.3",
     "git": "^0.1.5",
     "react": "16.13.1",
     "react-dom": "16.13.1",

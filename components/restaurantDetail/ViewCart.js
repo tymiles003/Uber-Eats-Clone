@@ -4,6 +4,8 @@ import _ from "react-native-google-places";
 import { useSelector } from "react-redux";
 import OrderItem from "./OrderItem";
 
+import firebase from "../../firebase";
+
 export default function ViewCart() {
   const [modalVisible, setModalVisible] = useState(false);
 
@@ -27,6 +29,16 @@ export default function ViewCart() {
     style: "currency",
     currency: "USD",
   });
+
+  const addOrderToFirebase = () => {
+    const db = firebase.firestore();
+    db.collection("orders").add({
+      items: items,
+      restaurantName: restaurantName,
+      createAt: firebase.firestore.FieldValue.serverTimestamp(),
+    });
+    setModalVisible(false);
+  };
 
   const styles = StyleSheet.create({
     modalContainer: {
@@ -82,7 +94,7 @@ export default function ViewCart() {
                   width: 300,
                   position: "relative",
                 }}
-                onPress={() => setModalVisible(false)}
+                onPress={() => addOrderToFirebase()}
               >
                 <Text style={{ color: "white", fontSize: 20 }}>Checkout</Text>
                 <Text
