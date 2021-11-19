@@ -6,7 +6,7 @@ import OrderItem from "./OrderItem";
 
 import firebase from "../../firebase";
 
-export default function ViewCart() {
+export default function ViewCart({ navigation }) {
   const [modalVisible, setModalVisible] = useState(false);
 
   // grabbing items from state
@@ -38,6 +38,7 @@ export default function ViewCart() {
       createAt: firebase.firestore.FieldValue.serverTimestamp(),
     });
     setModalVisible(false);
+    navigation.navigate("OrderCompleted");
   };
 
   const styles = StyleSheet.create({
