@@ -1,6 +1,7 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { View, Text, SafeAreaView } from "react-native";
 import { useSelector } from "react-redux";
+import LottieView from "lottie-react-native";
 
 export default function OrderCompleted() {
   const { items, restaurantName } = useSelector(
@@ -15,10 +16,12 @@ export default function OrderCompleted() {
     currency: "USD",
   });
   return (
-    <View>
+    <SafeAreaView style={{ flex: 1, backgroundColor: "white" }}>
+      {/* green checkmark */}
       <Text>
         Your order at {restaurantName} has been places for {totalUSD}
       </Text>
-    </View>
+      {/* cooking */}
+    </SafeAreaView>
   );
 }
