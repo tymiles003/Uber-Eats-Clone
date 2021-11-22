@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, SafeAreaView } from "react-native";
+import { Text, SafeAreaView } from "react-native";
 import { useSelector } from "react-redux";
 import LottieView from "lottie-react-native";
 
@@ -18,6 +18,13 @@ export default function OrderCompleted() {
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: "white" }}>
       {/* green checkmark */}
+      <LottieView
+        style={{ height: 100, alignSelf: "center", marginBottom: 30 }}
+        source={require("../assets/animations/check-mark.json")}
+        autoPlay
+        speed={0.5}
+        loop={false}
+      />
       <Text>
         Your order at {restaurantName} has been places for {totalUSD}
       </Text>
