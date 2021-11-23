@@ -57,7 +57,7 @@ export default function OrderCompleted() {
           speed={0.5}
           loop={false}
         />
-        <Text>
+        <Text style={{ fontSize: 20, fontWeight: "bold" }}>
           Your order at {restaurantName} has been places for {totalUSD}
         </Text>
         <MenuItems foods={lastOrder.items} hideCheckbox={true} />
