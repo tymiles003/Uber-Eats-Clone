@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Text, SafeAreaView, View } from "react-native";
+import { Text, SafeAreaView, View, ScrollView } from "react-native";
 import { useSelector } from "react-redux";
 import LottieView from "lottie-react-native";
 import MenuItems from "../components/restaurantDetail/MenuItems";
@@ -60,14 +60,16 @@ export default function OrderCompleted() {
         <Text style={{ fontSize: 20, fontWeight: "bold" }}>
           Your order at {restaurantName} has been places for {totalUSD}
         </Text>
-        <MenuItems foods={lastOrder.items} hideCheckbox={true} />
-        {/* cooking */}
-        <LottieView
-          style={{ height: 200, alignSelf: "center" }}
-          source={require("../assets/animations/cooking.json")}
-          autoPlay
-          speed={0.5}
-        />
+        <ScrollView>
+          <MenuItems foods={lastOrder.items} hideCheckbox={true} />
+          {/* cooking */}
+          <LottieView
+            style={{ height: 200, alignSelf: "center" }}
+            source={require("../assets/animations/cooking.json")}
+            autoPlay
+            speed={0.5}
+          />
+        </ScrollView>
       </View>
     </SafeAreaView>
   );
