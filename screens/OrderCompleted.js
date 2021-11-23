@@ -61,7 +61,11 @@ export default function OrderCompleted() {
           Your order at {restaurantName} has been places for {totalUSD}
         </Text>
         <ScrollView>
-          <MenuItems foods={lastOrder.items} hideCheckbox={true} />
+          <MenuItems
+            foods={lastOrder.items}
+            hideCheckbox={true}
+            marginLeft={10}
+          />
           {/* cooking */}
           <LottieView
             style={{ height: 200, alignSelf: "center" }}

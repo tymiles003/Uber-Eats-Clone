@@ -27,6 +27,14 @@ const foods = [
     image:
       "https://mydominicankitchen.com/wp-content/uploads/2019/07/Mofongo-Smart-Little-Cookie-3.jpg",
   },
+  {
+    title: "Chilaquiles",
+    description:
+      "Chilaquiles with cheese and sauce. A delicious mexican dish 🇲🇽",
+    price: "$14.50",
+    image:
+      "https://i2.wp.com/chilipeppermadness.com/wp-content/uploads/2020/11/Chilaquales-Recipe-Chilaquiles-Rojos-1.jpg",
+  },
 ];
 
 export default function RestaurantDetail({ route, navigation }) {
