@@ -2,11 +2,11 @@
 
 
 <p align="center">
-  <img width="150" src="https://i.postimg.cc/sDTxj2Vj/Screen-Shot-2021-11-24-at-12-26-13-AM.png">
-  <img width="150" src="https://i.postimg.cc/ZnBHb5gC/Screen-Shot-2021-11-24-at-12-26-21-AM.png">
-  <img width="150" src="https://i.postimg.cc/vH5jf0qD/Screen-Shot-2021-11-24-at-12-26-24-AM.png">
-  <img width="150" src="https://i.postimg.cc/yxcfhNT2/Screen-Shot-2021-11-24-at-12-26-28-AM.png">
-  <img width="150" src="https://i.postimg.cc/cCRmgbxS/Screen-Shot-2021-11-24-at-12-26-31-AM.png">
+  <img width="180" src="https://i.postimg.cc/sDTxj2Vj/Screen-Shot-2021-11-24-at-12-26-13-AM.png">
+  <img width="180" src="https://i.postimg.cc/ZnBHb5gC/Screen-Shot-2021-11-24-at-12-26-21-AM.png">
+  <img width="180" src="https://i.postimg.cc/vH5jf0qD/Screen-Shot-2021-11-24-at-12-26-24-AM.png">
+  <img width="180" src="https://i.postimg.cc/yxcfhNT2/Screen-Shot-2021-11-24-at-12-26-28-AM.png">
+  <img width="180" src="https://i.postimg.cc/cCRmgbxS/Screen-Shot-2021-11-24-at-12-26-31-AM.png">
   
 
 <h2> Introduction </h2>
