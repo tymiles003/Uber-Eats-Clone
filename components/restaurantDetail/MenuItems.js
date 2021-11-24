@@ -51,8 +51,8 @@ export default function MenuItems({
               <BouncyCheckbox
                 iconStyle={{ borderColor: "lightgray", borderRadius: 0 }}
                 fillColor="green"
-                onPress={(checkboxValue) => selectItem(food, checkboxValue)}
                 isChecked={isFoodInCart(food, cartItems)}
+                onPress={(checkboxValue) => selectItem(food, checkboxValue)}
               />
             )}
             <FoodInfo food={food} />
